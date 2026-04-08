@@ -22,4 +22,4 @@ This project analyzes Nike's global sales data to identify regional growth oppor
 - `visualizations/`: Exported charts and graphs.
 
 ## 📝 How to View
-Since this project uses Zerve's interactive infrastructure, you can view the live conversational report here: **[INSERT YOUR ZERVE REPORT LINK HERE]**
+Since this project uses Zerve's interactive infrastructure, you can view the live conversational report here: **https://app.zerve.ai/report/f6d15c48-b221-48f2-a5d5-d9cc83d94fd9**
