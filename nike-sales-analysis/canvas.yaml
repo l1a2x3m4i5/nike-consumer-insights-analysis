@@ -1,0 +1,149 @@
+id: 1cacf602-76a1-4e58-95c0-8abac0b7c185
+name: Nike Stock Market
+project_id: 3588d7aa-3869-47ea-95c2-a009aeb5d1cc
+global_imports: []
+python_global_imports: ''
+r_global_imports: ''
+requirements: []
+linux_packages: []
+environment_variables: []
+is_public: true
+organization_id: 2878e509-ceae-40c9-8d25-32835003d54c
+layers:
+- blocks:
+  - auto_size: false
+    canvas_id: 1cacf602-76a1-4e58-95c0-8abac0b7c185
+    compute_settings: null
+    description: Loads Nike stock data from a CSV file and displays the first few
+      rows and column names.
+    height: 1000
+    id: 06b58d01-95e2-47d2-a9a8-ea0aeb214b3e
+    layer_id: be068886-9fef-4fb9-a9cc-ae61823ed348
+    name: read_csv_print_head
+    parent_id: null
+    properties: {}
+    status: 3
+    type: 1
+    variables: null
+    width: 1600
+    x: 0
+    y: 0
+  - auto_size: false
+    canvas_id: 1cacf602-76a1-4e58-95c0-8abac0b7c185
+    compute_settings: null
+    description: Calculates daily price change by subtracting opening price from closing
+      price, then displays the date and change values.
+    height: 1000
+    id: 2d539fa8-7bd0-478c-af3b-5e54a1ca0ed0
+    layer_id: be068886-9fef-4fb9-a9cc-ae61823ed348
+    name: calculate_daily_change
+    parent_id: null
+    properties: {}
+    status: 3
+    type: 1
+    variables: null
+    width: 1600
+    x: 0
+    y: 2000
+  - auto_size: false
+    canvas_id: 1cacf602-76a1-4e58-95c0-8abac0b7c185
+    compute_settings: null
+    description: 'Convert the Date column to datetime format and sort the dataframe
+      chronologically by date. (Note: Block has missing pandas import, causing current
+      execution failure.)'
+    height: 1000
+    id: 4d25e71c-04d7-4b82-86b5-953eef69f935
+    layer_id: be068886-9fef-4fb9-a9cc-ae61823ed348
+    name: convert_sort_datetime
+    parent_id: null
+    properties: {}
+    status: 3
+    type: 1
+    variables: null
+    width: 1600
+    x: 0
+    y: 500
+  - auto_size: false
+    canvas_id: 1cacf602-76a1-4e58-95c0-8abac0b7c185
+    compute_settings: null
+    description: Calculates and displays key price statistics (highest, lowest, and
+      average) from a Close price column in a dataset.
+    height: 1000
+    id: c1a3ca3d-3bb6-4a7a-ae21-df7a32adaa61
+    layer_id: be068886-9fef-4fb9-a9cc-ae61823ed348
+    name: price_statistics
+    parent_id: null
+    properties: {}
+    status: 3
+    type: 1
+    variables: null
+    width: 1600
+    x: 0
+    y: 1500
+  - auto_size: false
+    canvas_id: 1cacf602-76a1-4e58-95c0-8abac0b7c185
+    compute_settings: null
+    description: Visualizes Nike stock closing prices over time with a line chart,
+      displaying date on x-axis and price on y-axis.
+    height: 1000
+    id: c1ea1755-75dd-4de6-a6df-8950adc03ae7
+    layer_id: be068886-9fef-4fb9-a9cc-ae61823ed348
+    name: stock_price_plot
+    parent_id: null
+    properties: {}
+    status: 3
+    type: 1
+    variables: null
+    width: 1600
+    x: 0
+    y: 1000
+  - auto_size: false
+    canvas_id: 1cacf602-76a1-4e58-95c0-8abac0b7c185
+    compute_settings: null
+    description: Analyzes Nike's historical stock price trends to identify patterns
+      and key statistics. Cleans data, visualizes closing prices over time, and calculates
+      metrics like maximum, minimum, and average prices to understand market volatility
+      and growth periods.
+    height: 1000
+    id: fa313e26-9571-4e57-8165-af2d5df30c87
+    layer_id: be068886-9fef-4fb9-a9cc-ae61823ed348
+    name: markdown_block
+    parent_id: null
+    properties: {}
+    status: 1
+    type: 4
+    variables: null
+    width: 1600
+    x: 0
+    y: 2500
+  canvas_id: 1cacf602-76a1-4e58-95c0-8abac0b7c185
+  edges:
+  - canvas_id: 1cacf602-76a1-4e58-95c0-8abac0b7c185
+    id: 2169f69b-b4f1-4521-b0bd-df19502d54f0
+    layer_id: be068886-9fef-4fb9-a9cc-ae61823ed348
+    source: 4d25e71c-04d7-4b82-86b5-953eef69f935
+    target: c1ea1755-75dd-4de6-a6df-8950adc03ae7
+  - canvas_id: 1cacf602-76a1-4e58-95c0-8abac0b7c185
+    id: 98fc9e0a-29cc-4017-a044-15651b4d772f
+    layer_id: be068886-9fef-4fb9-a9cc-ae61823ed348
+    source: 06b58d01-95e2-47d2-a9a8-ea0aeb214b3e
+    target: 4d25e71c-04d7-4b82-86b5-953eef69f935
+  - canvas_id: 1cacf602-76a1-4e58-95c0-8abac0b7c185
+    id: 9aa9ca6b-7a55-4e62-b732-d552880b7c40
+    layer_id: be068886-9fef-4fb9-a9cc-ae61823ed348
+    source: 2d539fa8-7bd0-478c-af3b-5e54a1ca0ed0
+    target: fa313e26-9571-4e57-8165-af2d5df30c87
+  - canvas_id: 1cacf602-76a1-4e58-95c0-8abac0b7c185
+    id: c85dd9d5-a294-4d71-bcd9-5a10586dbadb
+    layer_id: be068886-9fef-4fb9-a9cc-ae61823ed348
+    source: c1a3ca3d-3bb6-4a7a-ae21-df7a32adaa61
+    target: 2d539fa8-7bd0-478c-af3b-5e54a1ca0ed0
+  - canvas_id: 1cacf602-76a1-4e58-95c0-8abac0b7c185
+    id: df62ee99-f564-471d-a4ea-1fa0ac651d5a
+    layer_id: be068886-9fef-4fb9-a9cc-ae61823ed348
+    source: c1ea1755-75dd-4de6-a6df-8950adc03ae7
+    target: c1a3ca3d-3bb6-4a7a-ae21-df7a32adaa61
+  id: be068886-9fef-4fb9-a9cc-ae61823ed348
+  name: Development
+  type: 1
+assets: []
